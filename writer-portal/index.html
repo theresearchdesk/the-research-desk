@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Writer Portal | The Research Desk</title>
+    
+    <link rel="icon" type="image/png" href="../TRD-icon.png">
+
     <style>
         body, html { 
             margin: 0; 
@@ -11,7 +14,7 @@
             height: 100%; 
             width: 100%;
             overflow: hidden; 
-            background-color: #121212; /* Matches your portal theme */
+            background-color: #121212; 
         }
         iframe { 
             width: 100%; 
@@ -20,6 +23,17 @@
             display: block;
         }
     </style>
+
+    <script>
+      /** * This script detects if the page is being redirected to Google.
+       * If it "escapes" the iframe, it forces it back to your domain.
+       */
+      (function() {
+        if (window.top !== window.self && window.top.location.host.includes('script.google.com')) {
+          window.top.location.replace("https://theresearchdesks.com/writer-portal");
+        }
+      })();
+    </script>
 </head>
 <body>
     <iframe 

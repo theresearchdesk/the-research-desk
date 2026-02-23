@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="TRD-icon.png">
 
+    <!-- ═══ PRIMARY SEO ═══ -->
     <title>Contact The Research Desk | WhatsApp, Email & Project Enquiries</title>
     <meta name="description" content="Contact The Research Desk via WhatsApp (+92 3399 732724) or email (info@theresearchdesks.com). Submit your academic or technical project enquiry and get a response within 24 hours. Serving UK, USA, Australia, UAE & Canada since 2024.">
     <meta name="keywords" content="contact The Research Desk, academic help WhatsApp, assignment help email, contact assignment writing service, project enquiry, The Research Desk support">
@@ -12,6 +12,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.theresearchdesks.com/contact-us">
 
+    <!-- ═══ OPEN GRAPH ═══ -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.theresearchdesks.com/contact-us">
     <meta property="og:title" content="Contact The Research Desk | WhatsApp, Email & Project Enquiries">
@@ -21,12 +22,14 @@
     <meta property="og:site_name" content="The Research Desk">
     <meta property="og:locale" content="en_GB">
 
+    <!-- ═══ TWITTER CARD ═══ -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.theresearchdesks.com/contact-us">
     <meta name="twitter:title" content="Contact The Research Desk | WhatsApp, Email & Project Enquiries">
     <meta name="twitter:description" content="WhatsApp: +92 3399 732724 | Email: info@theresearchdesks.com. Academic and technical project enquiries. Response within 24 hours.">
     <meta name="twitter:image" content="https://www.theresearchdesks.com/og-image.jpg">
 
+    <!-- ═══ STRUCTURED DATA — ContactPage ═══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,6 +60,7 @@
     }
     </script>
 
+    <!-- ═══ FONTS ═══ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -96,53 +100,58 @@
         .channel-value { font-size: clamp(18px,2.5vw,28px); font-weight: 300; color: var(--text-primary); margin-bottom: 16px; letter-spacing: -0.01em; line-height: 1.3; }
         .channel-desc { color: var(--text-tertiary); font-size: 14px; line-height: 1.8; font-weight: 300; }
         /* WhatsApp CTA */
-        .whatsapp-cta-block { 
-            padding: 80px 60px; 
-            background: var(--bg-secondary); 
-            color: var(--text-primary); 
-            text-align: center; 
-            margin-bottom: 80px; 
-            border: 1px solid rgba(255,255,255,0.04); 
-        }
-        .whatsapp-cta-block h2 { 
-            font-size: clamp(28px,4vw,52px); 
-            font-weight: 300; 
-            letter-spacing: -0.03em; 
-            margin-bottom: 16px; 
-            color: var(--text-primary); 
-        }
-        .whatsapp-cta-block p { 
-            font-size: 16px; 
-            font-weight: 300; 
-            color: var(--text-secondary); 
-            margin-bottom: 40px; 
-        }
-        .whatsapp-cta-btn { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px; 
-            padding: 20px 48px; 
-            background: var(--text-primary); 
-            color: var(--bg-primary); 
-            text-decoration: none; 
-            border-radius: 2px; 
-            font-weight: 500; 
-            font-size: 13px; 
-            letter-spacing: 0.08em; 
-            text-transform: uppercase; 
-            transition: all 0.4s ease; 
-        }
-        .whatsapp-cta-btn svg { 
-            width: 20px; 
-            height: 20px; 
-            fill: var(--bg-primary); 
-        }
+/* WhatsApp CTA — Blended Version */
+.whatsapp-cta-block { 
+    padding: 80px 60px; 
+    background: var(--bg-secondary); /* Dark background instead of white */
+    color: var(--text-primary);     /* Light text instead of black */
+    text-align: center; 
+    margin-bottom: 80px; 
+    border: 1px solid rgba(255,255,255,0.04); /* Subtle border to match form */
+}
+
+.whatsapp-cta-block h2 { 
+    font-size: clamp(28px,4vw,52px); 
+    font-weight: 300; 
+    letter-spacing: -0.03em; 
+    margin-bottom: 16px; 
+    color: var(--text-primary); /* Ensure header is white */
+}
+
+.whatsapp-cta-block p { 
+    font-size: 16px; 
+    font-weight: 300; 
+    color: var(--text-secondary); /* Blended secondary text */
+    margin-bottom: 40px; 
+}
+
+.whatsapp-cta-btn { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 20px 48px; 
+    background: var(--text-primary); /* Button is now the highlight */
+    color: var(--bg-primary); 
+    text-decoration: none; 
+    border-radius: 2px; 
+    font-weight: 500; 
+    font-size: 13px; 
+    letter-spacing: 0.08em; 
+    text-transform: uppercase; 
+    transition: all 0.4s ease; 
+}
+
+.whatsapp-cta-btn svg { 
+    width: 20px; 
+    height: 20px; 
+    fill: var(--bg-primary); /* SVG matches button text color */
+}
         /* Response times */
         .response-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(255,255,255,0.03); padding: 2px; margin-bottom: 80px; }
         .response-card { padding: 48px 40px; background: var(--bg-primary); text-align: center; }
         .response-time { font-family: 'JetBrains Mono', monospace; font-size: clamp(28px,4vw,48px); font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
         .response-label { color: var(--text-tertiary); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 400; }
-        /* Contact Form */
+        /* Contact Form — full width */
         .form-container { max-width: 900px; margin: 0 auto; padding: 80px 80px; background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.04); }
         .form-group { margin-bottom: 32px; }
         .form-group label { display: block; margin-bottom: 12px; font-weight: 400; font-size: 13px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; }
@@ -188,6 +197,7 @@
             .form-container { padding: 48px 32px; }
             .form-row { grid-template-columns: 1fr; gap: 0; }
             .container { padding: 0 24px; }
+
         }
         @media (max-width: 640px) {
             header { padding: 28px 0; }
@@ -207,7 +217,7 @@
                 <a href="/" class="logo">TRD | The Research Desk</a>
                 <nav>
                     <ul class="nav-links" id="navLinks">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="index">Home</a></li>
                         <li><a href="assignment-help">Assignment Help</a></li>
                         <li><a href="technical-solutions">Tech Solutions</a></li>
                         <li><a href="earn-with-us">Earn With Us</a></li>
@@ -222,6 +232,7 @@
     </header>
 
     <main id="main-content">
+    <!-- Hero -->
     <section class="hero" aria-label="Contact The Research Desk — WhatsApp and Email Support">
         <div class="container">
             <div class="hero-content">
@@ -232,6 +243,7 @@
         </div>
     </section>
 
+    <!-- Contact Channels -->
     <section class="section" style="padding-top: 40px;">
         <div class="container">
             <div class="contact-channels">
@@ -240,7 +252,7 @@
                     <div class="channel-value">+92 3399 732724</div>
                     <div class="channel-desc">Mnemonic: +92 33 99 SEARCH<br>Available daily. Best for urgent projects, quick quotes, and real-time project updates. Message us and we'll respond fast.</div>
                 </a>
-                <a href="mailto:info@theresearchdesks.com" class="channel-card">
+                <a href="/cdn-cgi/l/email-protection#751c1b131a35011d10071006101407161d1110061e065b161a18" class="channel-card">
                     <div class="channel-label">Email</div>
                     <div class="channel-value">info@theresearchdesks.com</div>
                     <div class="channel-desc">For detailed project briefs, file attachments, formal quotations, and written correspondence. We respond within 24 hours on working days.</div>
@@ -252,6 +264,7 @@
                 </div>
             </div>
 
+            <!-- Response Times -->
             <div class="response-grid">
                 <div class="response-card">
                     <div class="response-time">&lt; 1hr</div>
@@ -269,6 +282,7 @@
         </div>
     </section>
 
+    <!-- WhatsApp Highlight CTA -->
     <section class="section" style="padding-top: 0; padding-bottom: 40px;">
         <div class="container">
             <div class="whatsapp-cta-block">
@@ -282,6 +296,7 @@
         </div>
     </section>
 
+    <!-- Full-Width Contact Form -->
     <section id="contact" class="section" style="padding-top: 40px;">
         <div class="container">
             <div class="section-header">
@@ -352,7 +367,7 @@
             <div class="footer-content">
                 <div class="footer-logo">TRD</div>
                 <div class="footer-nav">
-                    <a href="/">Home</a>
+                    <a href="index">Home</a>
                     <a href="assignment-help">Assignment Help</a>
                     <a href="technical-solutions">Tech Solutions</a>
                     <a href="earn-with-us">Earn With Us</a>
@@ -370,7 +385,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        document.querySelectorAll('a, button, .channel-card, .response-card').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 100); });
         function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
@@ -379,7 +398,4 @@
         });
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
-        }, { threshold: 0.1 });
-    </script>
-</body>
-</html>
+        }, { threshold: 0.1, rootMargin: '0px 0p'});

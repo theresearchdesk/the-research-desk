@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Writer Portal | The Research Desk</title>
     
-    <link rel="icon" type="image/png" href="writer-portal/TRD-icon.png">
+    <link rel="icon" type="image/png" href="../TRD-icon.png">
 
     <style>
         body, html { 
@@ -26,33 +26,8 @@
 </head>
 <body>
     <iframe 
-        src="https://script.google.com/macros/s/AKfycbxFQFYoNvhxn8DUlFSx7gQD00ewXFtH8MQ8xb_JQ-QEBQeQEoIEnOb37CbRzB4TyD3k/exec" 
+        src="https://script.google.com/macros/s/AKfycbzyVDIkYTdPuCV2phUHspI_itqXJIHQEg-J8cu3YmdeYJwonIUI-AUMKnGff26lBBBJ/exec" 
         allow="camera; microphone; geolocation;">
     </iframe>
 </body>
 </html>
-
-<script>
-  /**
-   * 1. THE LOGOUT FUNCTION
-   * Use this to force the entire browser tab to return to your site.
-   */
-  function logoutAndRedirect() {
-    // 'window.top' targets the main browser address bar
-    window.top.location.href = "https://theresearchdesks.com/writer-portal";
-  }
-
-  /**
-   * 2. APPS SCRIPT FAVICON FIX
-   * Ensures the TRD logo shows even if the script is opened directly.
-   */
-  (function() {
-    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/png';
-    link.rel = 'shortcut icon';
-    link.href = 'https://theresearchdesks.com/TRD-icon.png';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  })();
-</script>
-
-<button type="button" onclick="logoutAndRedirect()">Logout</button>

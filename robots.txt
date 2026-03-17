@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.theresearchdesks.com/sitemap.xml
+Sitemap: https://theresearchdesks.com/sitemap.xml

@@ -216,6 +216,9 @@
         .footer-copyright { margin-top: 48px; color: var(--text-tertiary); font-size: 12px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
         .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 8px; }
         .menu-toggle span { width: 24px; height: 1px; background: var(--text-primary); transition: all 0.3s ease; }
+        .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         /* No-AI badge */
         .ai-badge { display: inline-block; margin-top: 32px; padding: 12px 28px; border: 1px solid rgba(255,255,255,0.12); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.12em; animation: fadeInUp 1.2s cubic-bezier(0.16,1,0.3,1) 0.6s both; }
         @media (max-width: 968px) {
@@ -246,6 +249,12 @@
         ::selection { background: var(--text-primary); color: var(--bg-primary); }
         ::-moz-selection { background: var(--text-primary); color: var(--bg-primary); }
     </style>
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+        document.querySelector('.menu-toggle').classList.toggle('active');
+    }
+</script>
 </head>
 <body>
     <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;background:#fff;color:#000;padding:8px 16px;font-size:14px;" onfocus="this.style.left='0'">Skip to main content</a>
@@ -255,11 +264,11 @@
                 <a href="/" class="logo">TRD | The Research Desk</a>
                 <nav>
                     <ul class="nav-links" id="navLinks">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="assignment-help" class="active">Assignment Help</a></li>
-                        <li><a href="technical-solutions">Tech Solutions</a></li>
-                        <li><a href="earn-with-us">Earn With Us</a></li>
-                        <li><a href="contact-us">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="assignment-help.html" class="active">Assignment Help</a></li>
+                        <li><a href="technical-solutions.html">Tech Solutions</a></li>
+                        <li><a href="earn-with-us.html">Earn With Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="menu-toggle" onclick="toggleMenu()">
@@ -464,33 +473,7 @@
             </div>
         </div>
     </section>
-<script>
 
-    document.querySelectorAll('.faq-question').forEach(question => {
-
-        question.addEventListener('click', () => {
-
-            const faqItem = question.parentElement;
-
-            
-
-            // Optional: Close other open FAQ items (Accordion effect)
-
-            document.querySelectorAll('.faq-item').forEach(item => {
-
-                if (item !== faqItem) item.classList.remove('active');
-
-            });
-
-
-
-            faqItem.classList.toggle('active');
-
-        });
-
-    });
-
-</script>
     <!-- Contact Form -->
     <section id="contact" class="section" style="padding-top: 0;">
         <div class="container">
@@ -540,11 +523,11 @@
             <div class="footer-content">
                 <div class="footer-logo">TRD</div>
                 <div class="footer-nav">
-                    <a href="/">Home</a>
-                    <a href="assignment-help">Assignment Help</a>
-                    <a href="technical-solutions">Tech Solutions</a>
-                    <a href="earn-with-us">Earn With Us</a>
-                    <a href="contact-us">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="assignment-help.html">Assignment Help</a>
+                    <a href="technical-solutions.html">Tech Solutions</a>
+                    <a href="earn-with-us.html">Earn With Us</a>
+                    <a href="contact-us.html">Contact</a>
                 </div>
                 <p class="footer-text">Premium academic help for a global audience. 100% human-written. Excellence delivered since 2024.</p>
                 <a href="mailto:info@theresearchdesks.com" class="footer-email">info@theresearchdesks.com</a>
@@ -571,12 +554,26 @@
             document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
             if (!isActive) faqItem.classList.add('active');
         }
-        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
+        
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
+            link.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('active'); document.querySelector('.menu-toggle').classList.remove('active'); });
         });
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
-        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
-        document.querySelectorAll('.portfolio-card, .faq-item, .trust-card, .stat-block').forEach((item, index) => {
-            item.style.opacity = '0'; item.style.transform });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.portfolio-card, .faq-item, .trust-card, .stat-block, .perk-card, .process-step').forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    observer.observe(item);
+});
+    </script>
+</body>
+</html>

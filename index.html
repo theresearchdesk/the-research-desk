@@ -159,7 +159,6 @@
       ]
     }
     </script>
-
     <!-- ═══ FONTS ═══ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -293,6 +292,9 @@
         /* Mobile Menu */
         .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 8px; }
         .menu-toggle span { width: 24px; height: 1px; background: var(--text-primary); transition: all 0.3s ease; }
+        .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         /* Scroll Indicator */
         .scroll-indicator { position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); width: 1px; height: 80px; background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent); animation: scrollPulse 2s ease-in-out infinite; }
         @keyframes scrollPulse { 0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); } 50% { opacity: 1; transform: translateX(-50%) translateY(10px); } }
@@ -336,6 +338,12 @@
         ::selection { background: var(--text-primary); color: var(--bg-primary); }
         ::-moz-selection { background: var(--text-primary); color: var(--bg-primary); }
     </style>
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+        document.querySelector('.menu-toggle').classList.toggle('active');
+    }
+</script>
 </head>
 <body>
     <!-- Skip to content for accessibility / crawlers -->
@@ -348,11 +356,11 @@
                 <a href="/" class="logo">TRD | The Research Desk</a>
                 <nav>
                     <ul class="nav-links" id="navLinks">
-                        <li><a href="index" class="active">Home</a></li>
-                        <li><a href="assignment-help">Assignment Help</a></li>
-                        <li><a href="technical-solutions">Tech Solutions</a></li>
-                        <li><a href="earn-with-us">Earn With Us</a></li>
-                        <li><a href="contact-us">Contact</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="assignment-help.html">Assignment Help</a></li>
+                        <li><a href="technical-solutions.html">Tech Solutions</a></li>
+                        <li><a href="earn-with-us.html">Earn With Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="menu-toggle" onclick="toggleMenu()">
@@ -371,8 +379,8 @@
                 <h1 class="hero-title">We Handle It.</h1>
                 <p class="hero-subtitle">Expert thesis writing, assignment help, and presentations — plus Google Sheets automation, SaaS development, and AI calling agents. 100% human-written. Trusted by students across the UK, USA, Australia, UAE &amp; Canada since 2024.</p>
                 <div class="hero-cta-group">
-                    <a href="#contact" class="cta-button">Start Your Project</a>
-                    <a href="assignment-help" class="cta-button-outline">Explore Services</a>
+                    <a href="#contact-us.html" class="cta-button">Start Your Project</a>
+                    <a href="assignment-help.html" class="cta-button-outline">Explore Services</a>
                 </div>
             </div>
         </div>
@@ -422,19 +430,19 @@
                         <div class="card-number">01</div>
                         <h3 class="card-title">Thesis & Dissertations</h3>
                         <p class="card-description">Comprehensive Bachelor/Masters and PhD-level research with meticulous methodology, literature reviews, and data analysis. Delivered to the highest academic standards.</p>
-                        <a href="assignment-help" class="card-link">Learn more →</a>
+                        <a href="assignment-help.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">02</div>
                         <h3 class="card-title">Academic Assignments</h3>
                         <p class="card-description">Essays, research papers, case studies and reports across Nursing, Law, Engineering, Business, Humanities and Data Science and more. 99% accuracy guaranteed.</p>
-                        <a href="assignment-help" class="card-link">Learn more →</a>
+                        <a href="assignment-help.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">03</div>
                         <h3 class="card-title">Professional Presentations</h3>
                         <p class="card-description">Impactful slide decks and visual presentations that communicate complex ideas with clarity and handy scripts. Designed to impress professors and industry panels alike.</p>
-                        <a href="assignment-help" class="card-link">Learn more →</a>
+                        <a href="assignment-help.html" class="card-link">Learn more →</a>
                     </div>
                 </div>
             </div>
@@ -450,37 +458,37 @@
                         <div class="card-number">01</div>
                         <h3 class="card-title">Google Sheets Automations</h3>
                         <p class="card-description">AppsScript wizardry, complex formula engineering, and full dashboarding solutions. Automate your workflows and eliminate manual data entry forever.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">02</div>
                         <h3 class="card-title">SaaS Software Development</h3>
                         <p class="card-description">Build scalable, production-ready software products. From MVPs to full-stack SaaS platforms — we architect solutions that grow with your vision.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">03</div>
                         <h3 class="card-title">Custom POS Systems</h3>
                         <p class="card-description">Streamline your operations with tailored Point of Sale systems. We eliminate manual entry and human error through seamless automation, giving you real-time insights into your business growth.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">04</div>
                         <h3 class="card-title">iOS/Android Applications</h3>
                         <p class="card-description">Turn your vision into a mobile reality with high-performance, native-quality apps. From sleek UI/UX to robust backend integration, we build mobile experiences tailored to your business needs.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>                    
                     <div class="portfolio-card">
                         <div class="card-number">05</div>
                         <h3 class="card-title">AI Calling Agents</h3>
                         <p class="card-description">Implement LLM-powered voice automation that handles inbound calls, outreach, and customer service. Real AI intelligence, real phone conversations.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>
                     <div class="portfolio-card">
                         <div class="card-number">06</div>
                         <h3 class="card-title">Website Creation</h3>
                         <p class="card-description">Launch your digital presence with modern, responsive, and full-stack websites. Whether for startups or established enterprises, we blend stunning aesthetics with high-speed performance.</p>
-                        <a href="technical-solutions" class="card-link">Learn more →</a>
+                        <a href="technical-solutions.html" class="card-link">Learn more →</a>
                     </div>
                 </div>
             </div>
@@ -612,33 +620,6 @@
             </div>
         </div>
     </section>
-<script>
-
-    document.querySelectorAll('.faq-question').forEach(question => {
-
-        question.addEventListener('click', () => {
-
-            const faqItem = question.parentElement;
-
-            
-
-            // Optional: Close other open FAQ items (Accordion effect)
-
-            document.querySelectorAll('.faq-item').forEach(item => {
-
-                if (item !== faqItem) item.classList.remove('active');
-
-            });
-
-
-
-            faqItem.classList.toggle('active');
-
-        });
-
-    });
-
-</script>
     <!-- Contact Form Section -->
     <section id="contact" class="section">
         <div class="container">
@@ -692,10 +673,10 @@
                 <div class="footer-logo">TRD</div>
                 <div class="footer-nav">
                     <a href="/">Home</a>
-                    <a href="assignment-help">Assignment Help</a>
-                    <a href="technical-solutions">Tech Solutions</a>
-                    <a href="earn-with-us">Earn With Us</a>
-                    <a href="contact-us">Contact</a>
+                    <a href="assignment-help.html">Assignment Help</a>
+                    <a href="technical-solutions.html">Tech Solutions</a>
+                    <a href="earn-with-us.html">Earn With Us</a>
+                    <a href="contact-us.html">Contact</a>
                 </div>
                 <p class="footer-text">Premium academic help and technical solutions for a global audience. Excellence delivered since 2024.</p>
                 <address style="font-style:normal;">
@@ -734,9 +715,8 @@
             document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
             if (!isActive) faqItem.classList.add('active');
         }
-        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
+            link.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('active'); document.querySelector('.menu-toggle').classList.remove('active'); });
         });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -746,11 +726,21 @@
             });
         });
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)';
-            } 
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.unobserve(entry.target);
+        }
     });
-}, { 
-    threshold: 0.1 
-});
+}, { threshold: 0.1 });
 
-// Don't forget to actually tell the observer what to watch!
+document.querySelectorAll('.portfolio-card, .faq-item, .trust-card, .stat-block, .perk-card, .process-step').forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    observer.observe(item);
+});
+        </script>
+</body>
+</html>
